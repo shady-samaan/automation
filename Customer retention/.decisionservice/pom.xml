@@ -2,23 +2,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-        <artifactId>myDecisionService</artifactId>
+        <groupId>cp4admin.test_ads.customer_retention</groupId>
+        <artifactId>customerRetention</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>myDecisionServiceDecisionService</artifactId>
+    <artifactId>customerRetentionDecisionService</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-            <artifactId>myDataModel</artifactId>
+            <groupId>decisions.samplesolutions.customer_retention</groupId>
+            <artifactId>data</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-            <artifactId>myDecisionModel</artifactId>
+            <groupId>decisions.samplesolutions.customer_retention</groupId>
+            <artifactId>retentionOffer</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -35,8 +35,6 @@
     </dependencies>
 
     
-
-
 
 <build>
         <resources>
@@ -63,8 +61,8 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-                                    <artifactId>myDataModel</artifactId>
+                                    <groupId>decisions.samplesolutions.customer_retention</groupId>
+                                    <artifactId>data</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
@@ -72,8 +70,8 @@
                                     <outputDirectory>${project.build.directory}/classes</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-                                    <artifactId>myDecisionModel</artifactId>
+                                    <groupId>decisions.samplesolutions.customer_retention</groupId>
+                                    <artifactId>retentionOffer</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

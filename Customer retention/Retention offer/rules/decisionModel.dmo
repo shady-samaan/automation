@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>04e3c425-d170-4669-a87f-33a4aa17833f</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer">
+        <description>Customer information</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="CustomerRecord" collection="false" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer" typeRef="CustomerRecord"/>
+    </inputData>
+    <decision id="node_1" name="Retention offer">
+        <description>Output the best offer, supposed to minimize churn.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="CustomerRecord" collection="false" name="Customer"/>
+                <input bomType="Subscription" collection="false" name="Subscription"/>
+                <input bomType="java.lang.Double" collection="false" name="Customer value"/>
+                <input bomType="java.lang.String" collection="false" name="Logical upgrade"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Low operation cost"/>
+                <input bomType="java.lang.Boolean" collection="false" name="VIP customer"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Churn prediction"/>
+                <output bomType="Recommendation" collection="false" name="Retention offer"/>
+                <rule defaultRule="false" href="node_1/Customer%20satisfaction%20questionnaire.drl" kind="BusinessRule" name="Customer satisfaction questionnaire"/>
+                <rule defaultRule="false" href="node_1/Discount%20for%20low%20ops%20cost.drl" kind="BusinessRule" name="Discount for low ops cost"/>
+                <rule defaultRule="false" href="node_1/VIP%20Discounted%20Upgrade.drl" kind="BusinessRule" name="VIP Discounted Upgrade"/>
+                <rule defaultRule="false" href="node_1/VIP%20Discount.drl" kind="BusinessRule" name="VIP Discount"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Retention offer" typeRef="Recommendation"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Subscription">
+        <description>Current subscription</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Subscription" collection="false" name="Subscription"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Subscription" typeRef="Subscription"/>
+    </inputData>
+    <decision id="node_3" name="Customer value">
+        <description>Size the customer value (0-100)</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="CustomerRecord" collection="false" name="Customer"/>
+                <input bomType="Subscription" collection="false" name="Subscription"/>
+                <output bomType="java.lang.Double" collection="false" name="Customer value"/>
+                <rule defaultRule="false" href="node_3/value.dmt" kind="DecisionTable" name="value"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Customer value" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Logical upgrade">
+        <description>If we had to propose an upgrade, what would be the most logical upgrade.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Subscription" collection="false" name="Subscription"/>
+                <output bomType="java.lang.String" collection="false" name="Logical upgrade"/>
+                <rule defaultRule="false" href="node_4/upgrade%20table.dmt" kind="DecisionTable" name="upgrade table"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Logical upgrade" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Low operation cost">
+        <description>Indicate whether this customer costs a lot or not.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="CustomerRecord" collection="false" name="Customer"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Low operation cost"/>
+                <rule defaultRule="false" href="node_5/location%20table.dmt" kind="DecisionTable" name="location table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Low operation cost" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="VIP customer">
+        <description>Is the customer a must-keep one?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Customer value"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Low operation cost"/>
+                <output bomType="java.lang.Boolean" collection="false" name="VIP customer"/>
+                <rule defaultRule="false" href="node_6/VIP%20table.dmt" kind="DecisionTable" name="VIP table"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="VIP customer" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_7" name="Churn prediction">
+        <description>Is this customer about to churn?</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Boolean" collection="false" name="Churn prediction"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Churn prediction" typeRef="java.lang.Boolean"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

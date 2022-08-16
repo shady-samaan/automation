@@ -1,0 +1,20 @@
+{
+  "customer": {
+    "children": 2,
+    "gender": "M",
+    "location": "country",
+    "name": "John",
+    "age": 43,
+    "maritalStatus": "M",
+    "carOwner": true,
+    "estimatedIncome": 56000
+  },
+  "subscription": {
+    "usage": 105,
+    "internationalCalls": 30,
+    "localCalls": 32,
+    "longDistanceCalls": 43,
+    "paymentMethod": "CC",
+    "ratePlan": "Essentials"
+  }
+}

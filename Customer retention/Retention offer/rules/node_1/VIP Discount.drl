@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>VIP Discount</name>
+  <uuid>a90ecd3e-5866-48a7-b0f4-a6dc0dd57392</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Churn prediction'
+    and 'VIP customer'
+    and 'Logical upgrade' is  "KEEP OFFER"
+then
+    set the message of decision to "Offer " + the name + " a 25% discount on the current subscription, because he is an important customer.";
+    set the estimated cost of decision to 0.25 * the usage ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
