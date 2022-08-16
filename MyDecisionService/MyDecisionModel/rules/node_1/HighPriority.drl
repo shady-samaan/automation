@@ -4,5 +4,5 @@
   <uuid>684c8cf1-4cb5-46bc-9553-b258336feba0</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if Priority is High then 
-	set decision to "Ticket " + TicketID + " will be resolved in 1 hour";]]></definition>
+	set decision to "Ticket " + TicketID + " will be resolved in LESS THAN 1 hour";]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
