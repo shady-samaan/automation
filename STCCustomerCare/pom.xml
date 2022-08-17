@@ -61,6 +61,7 @@
         <module>.decisionservice</module>
         <module>MyDataModel</module>
         <module>Ticketing Decisions Model</module>
+        <module>Tickets Escalations Model</module>
     </modules>
 
     <build>

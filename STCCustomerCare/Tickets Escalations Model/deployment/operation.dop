@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Tickets Escalations Model">
+  <name>Tickets-Escalations-Model</name>
+  <uuid>c54903b8-cc7e-4f3d-8ae9-b7196a954253</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#48f315e0-9c78-4e2a-a25d-070a5846eb5b"/>
+  <targetRuleProject href="../../Tickets%20Escalations%20Model#96526224-a269-44e9-9cc4-21a19b3ef67c"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

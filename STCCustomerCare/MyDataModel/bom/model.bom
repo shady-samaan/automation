@@ -42,6 +42,27 @@ public class AssignedTeam
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Networks";
 }
 
+public class EscalationLevel
+        extends java.lang.Enum
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "EscalationLevel"
+        property "de.generated" "true"
+{
+    domain {static director, static generalManager, static manager, static none}
+    public static final readonly EscalationLevel director
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Director";
+    public static final readonly EscalationLevel generalManager
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "GeneralManager";
+    public static final readonly EscalationLevel manager
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Manager";
+    public static final readonly EscalationLevel none
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "None";
+}
+
 public class Priority
         extends java.lang.Enum
         property "ads.typeId" "2"

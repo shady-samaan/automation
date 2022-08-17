@@ -13,6 +13,13 @@ AssignedTeam.databaseAdministration#instance.label = Database Administration
 AssignedTeam.infrastructure#instance.label = Infrastructure
 AssignedTeam.networks#instance.label = Networks
 
+# EscalationLevel
+EscalationLevel#concept.label = Escalation Level
+EscalationLevel.director#instance.label = Director
+EscalationLevel.generalManager#instance.label = General Manager
+EscalationLevel.manager#instance.label = Manager
+EscalationLevel.none#instance.label = None
+
 # Priority
 Priority#concept.label = Priority
 Priority.high#instance.label = High

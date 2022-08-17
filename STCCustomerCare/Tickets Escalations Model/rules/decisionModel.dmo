@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>48f315e0-9c78-4e2a-a25d-070a5846eb5b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Ticket Date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Ticket Date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Ticket Date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <decision id="node_1" name="Escalate">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Severity" collection="false" name="Severity"/>
+                <input bomType="Priority" collection="false" name="Priority"/>
+                <input bomType="com.ibm.ia.TimePeriod" collection="false" name="Ticket Age"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Escalate"/>
+                <rule defaultRule="false" href="node_1/Escalation%20Rule.drl" kind="BusinessRule" name="Escalation Rule"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Escalate" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Severity">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Severity" collection="false" name="Severity"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Severity" typeRef="Severity"/>
+    </inputData>
+    <inputData id="node_3" name="Priority">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Priority" collection="false" name="Priority"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Priority" typeRef="Priority"/>
+    </inputData>
+    <decision id="node_4" name="Escalate To">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="Escalate"/>
+                <input bomType="AffectedSystem" collection="false" name="Affected System"/>
+                <output bomType="EscalationLevel" collection="false" name="Escalate To"/>
+                <rule defaultRule="false" href="node_4/No%20Escalation.drl" kind="BusinessRule" name="No Escalation"/>
+                <rule defaultRule="false" href="node_4/Escalate%20To%20GM.drl" kind="BusinessRule" name="Escalate To GM"/>
+                <rule defaultRule="false" href="node_4/Escalate%20to%20Director.drl" kind="BusinessRule" name="Escalate to Director"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Escalate To" typeRef="EscalationLevel"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Ticket Age">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Ticket Date"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Current Date"/>
+                <output bomType="com.ibm.ia.TimePeriod" collection="false" name="Ticket Age"/>
+                <rule defaultRule="false" href="node_6/Calculate%20Ticket%20Age.drl" kind="BusinessRule" name="Calculate Ticket Age"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Ticket Age" typeRef="com.ibm.ia.TimePeriod"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_7" name="Current Date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Current Date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Current Date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <inputData id="node_8" name="Affected System">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="AffectedSystem" collection="false" name="Affected System"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_8_ii" name="Affected System" typeRef="AffectedSystem"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>
