@@ -1,0 +1,26 @@
+
+# AffectedSystem
+AffectedSystem#concept.label = Affected System
+AffectedSystem.customerCare#instance.label = Customer Care
+AffectedSystem.networkSystem#instance.label = Network System
+AffectedSystem.operationCenter#instance.label = Operation Center
+AffectedSystem.paymentSystem#instance.label = Payment System
+
+# AssignedTeam
+AssignedTeam#concept.label = Assigned Team
+AssignedTeam.ITOperations#instance.label = IT Operations
+AssignedTeam.databaseAdministration#instance.label = Database Administration
+AssignedTeam.infrastructure#instance.label = Infrastructure
+AssignedTeam.networks#instance.label = Networks
+
+# Priority
+Priority#concept.label = Priority
+Priority.high#instance.label = High
+Priority.low#instance.label = Low
+Priority.medium#instance.label = Medium
+
+# Severity
+Severity#concept.label = Severity
+Severity.$#instance.label = 1
+Severity.$1#instance.label = 2
+Severity.$2#instance.label = 3

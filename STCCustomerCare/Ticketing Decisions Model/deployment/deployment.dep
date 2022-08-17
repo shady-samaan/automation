@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="cp4admin.test_ads.mydecisionservice:myDecisionModel" ruleAppVersion="LATEST-SNAPSHOT" packageName="cp4admin.test_ads.mydecisionservice.mydecisionmodel" managingXom="true">
-  <name>MyDecisionModel</name>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="cp4admin.test_ads.mydecisionservice:ticketingDecisionsModel" ruleAppVersion="LATEST-SNAPSHOT" packageName="cp4admin.test_ads.mydecisionservice.mydecisionmodel" managingXom="true">
+  <name>Ticketing-Decisions-Model</name>
   <uuid>f3f50828-b020-40f3-a880-736019a0355b</uuid>
   <locales>en_US</locales>
   <operations operationName="operation">

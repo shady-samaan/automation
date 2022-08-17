@@ -1,0 +1,80 @@
+
+
+public class AffectedSystem
+        extends java.lang.Enum
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "AffectedSystem"
+        property "de.generated" "true"
+{
+    domain {static customerCare, static networkSystem, static operationCenter, static paymentSystem}
+    public static final readonly AffectedSystem customerCare
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CustomerCare";
+    public static final readonly AffectedSystem networkSystem
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "NetworkSystem";
+    public static final readonly AffectedSystem operationCenter
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "OperationCenter";
+    public static final readonly AffectedSystem paymentSystem
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "PaymentSystem";
+}
+
+public class AssignedTeam
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "AssignedTeam"
+        property "de.generated" "true"
+{
+    domain {static ITOperations, static databaseAdministration, static infrastructure, static networks}
+    public static final readonly AssignedTeam ITOperations
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ITOperations";
+    public static final readonly AssignedTeam databaseAdministration
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DatabaseAdministration";
+    public static final readonly AssignedTeam infrastructure
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Infrastructure";
+    public static final readonly AssignedTeam networks
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Networks";
+}
+
+public class Priority
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Priority"
+        property "de.generated" "true"
+{
+    domain {static high, static low, static medium}
+    public static final readonly Priority high
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "High";
+    public static final readonly Priority low
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Low";
+    public static final readonly Priority medium
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Medium";
+}
+
+public class Severity
+        extends java.lang.Enum
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Severity"
+        property "de.generated" "true"
+{
+    domain {static $, static $1, static $2}
+    public static final readonly Severity $
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "1";
+    public static final readonly Severity $1
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "2";
+    public static final readonly Severity $2
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "3";
+}
+

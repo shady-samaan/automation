@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="MyDecisionModel">
-  <name>MyDecisionModel</name>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Ticketing Decisions Model">
+  <name>Ticketing-Decisions-Model</name>
   <uuid>c393876f-4247-4cf0-b4b8-8a85c90008e5</uuid>
   <decisionModel href="../rules/decisionModel.dmo#d95b55c0-8965-4302-bd01-638a54d98cc0"/>
-  <targetRuleProject href="../../MyDecisionModel#c67a084f-b0f3-400f-ba4e-295470146bc7"/>
+  <targetRuleProject href="../../Ticketing%20Decisions%20Model#c67a084f-b0f3-400f-ba4e-295470146bc7"/>
   <tags key="operationDescription">
     <value><![CDATA[""]]></value>
   </tags>

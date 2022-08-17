@@ -2,13 +2,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-        <artifactId>myDecisionService</artifactId>
+        <groupId>cp4admin.stc_ads.stccustomercare</groupId>
+        <artifactId>STCCustomerCare</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>cp4admin.test_ads.mydecisionservice</groupId>
-    <artifactId>myDecisionModel</artifactId>
+    <artifactId>ticketingDecisionsModel</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
     <build>
@@ -26,7 +26,7 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>MyDecisionModel</name>
+                            <name>Ticketing-Decisions-Model</name>
                         </deployment>
                     </deployments>
                 <packageName>cp4admin.test_ads.mydecisionservice.mydecisionmodel</packageName>

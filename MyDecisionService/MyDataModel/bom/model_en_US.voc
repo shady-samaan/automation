@@ -1,6 +1,0 @@
-
-# Priority
-Priority#concept.label = Priority
-Priority.high#instance.label = High
-Priority.low#instance.label = Low
-Priority.medium#instance.label = Medium
