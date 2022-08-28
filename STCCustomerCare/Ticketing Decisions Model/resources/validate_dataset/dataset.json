@@ -1,6 +1,6 @@
 {
   "ticketID": "T124",
-  "priority": "High",
-  "severity": "1",
-  "affectedSystem": "CustomerCare"
+  "affectedSystem": "OperationCenter",
+  "priority": "Low",
+  "severity": "1"
 }

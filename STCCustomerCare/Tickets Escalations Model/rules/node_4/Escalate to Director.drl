@@ -4,7 +4,7 @@
   <uuid>4f63950e-9599-493c-93d1-6e1046196663</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-	Escalate 
+	Escalate is true
 	and 'Affected System' is Payment System 
 then
 	set decision to Director ;]]></definition>

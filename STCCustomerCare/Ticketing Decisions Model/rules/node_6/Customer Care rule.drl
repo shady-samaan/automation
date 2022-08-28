@@ -3,9 +3,5 @@
   <name>Customer Care rule</name>
   <uuid>f99ee956-b499-4790-9a86-a99aadc0b439</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[if
-	Severity is 1 
-	and 'Affected System' is Customer Care 
-then
-	set decision to true ;]]></definition>
+  <definition><![CDATA[if Severity is 1 and 'Affected System' is Customer Care then set decision to true ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
