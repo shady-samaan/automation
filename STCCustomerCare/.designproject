@@ -1,1 +1,6 @@
-{"description":"Ticketing Decisions PoC for STC Customer Care","locale":"en_US","properties":{}}
+{
+  "description" : "Ticketing Decisions PoC for STC Customer Care",
+  "locale" : "en_US",
+  "properties" : { },
+  "groupId" : "cp4admin.test_ads.stccustomercare"
+}

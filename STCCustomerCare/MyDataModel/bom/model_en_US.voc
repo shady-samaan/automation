@@ -1,33 +1,33 @@
 
-# AffectedSystem
-AffectedSystem#concept.label = Affected System
-AffectedSystem.customerCare#instance.label = Customer Care
-AffectedSystem.networkSystem#instance.label = Network System
-AffectedSystem.operationCenter#instance.label = Operation Center
-AffectedSystem.paymentSystem#instance.label = Payment System
+# cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem
+cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem#concept.label = Affected System
+cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem.customerCare#instance.label = Customer Care
+cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem.networkSystem#instance.label = Network System
+cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem.operationCenter#instance.label = Operation Center
+cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem.paymentSystem#instance.label = Payment System
 
-# AssignedTeam
-AssignedTeam#concept.label = Assigned Team
-AssignedTeam.ITOperations#instance.label = IT Operations
-AssignedTeam.databaseAdministration#instance.label = Database Administration
-AssignedTeam.infrastructure#instance.label = Infrastructure
-AssignedTeam.networks#instance.label = Networks
+# cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam
+cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam#concept.label = Assigned Team
+cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam.ITOperations#instance.label = IT Operations
+cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam.databaseAdministration#instance.label = Database Administration
+cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam.infrastructure#instance.label = Infrastructure
+cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam.networks#instance.label = Networks
 
-# EscalationLevel
-EscalationLevel#concept.label = Escalation Level
-EscalationLevel.director#instance.label = Director
-EscalationLevel.generalManager#instance.label = General Manager
-EscalationLevel.manager#instance.label = Manager
-EscalationLevel.none#instance.label = None
+# cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel
+cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel#concept.label = Escalation Level
+cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel.director#instance.label = Director
+cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel.generalManager#instance.label = General Manager
+cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel.manager#instance.label = Manager
+cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel.none#instance.label = None
 
-# Priority
-Priority#concept.label = Priority
-Priority.high#instance.label = High
-Priority.low#instance.label = Low
-Priority.medium#instance.label = Medium
+# cp4admin.test_ads.mydecisionservice.mydatamodel.Priority
+cp4admin.test_ads.mydecisionservice.mydatamodel.Priority#concept.label = Priority
+cp4admin.test_ads.mydecisionservice.mydatamodel.Priority.high#instance.label = High
+cp4admin.test_ads.mydecisionservice.mydatamodel.Priority.low#instance.label = Low
+cp4admin.test_ads.mydecisionservice.mydatamodel.Priority.medium#instance.label = Medium
 
-# Severity
-Severity#concept.label = Severity
-Severity.$#instance.label = 1
-Severity.$1#instance.label = 2
-Severity.$2#instance.label = 3
+# cp4admin.test_ads.mydecisionservice.mydatamodel.Severity
+cp4admin.test_ads.mydecisionservice.mydatamodel.Severity#concept.label = Severity
+cp4admin.test_ads.mydecisionservice.mydatamodel.Severity.$#instance.label = 1
+cp4admin.test_ads.mydecisionservice.mydatamodel.Severity.$1#instance.label = 2
+cp4admin.test_ads.mydecisionservice.mydatamodel.Severity.$2#instance.label = 3

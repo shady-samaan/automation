@@ -31,5 +31,5 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
-  <documentation><![CDATA[Model for STC Tickets Escalation]]></documentation>
+  <documentation><![CDATA[]]></documentation>
 </ilog.rules.studio.model.base:RuleProject>

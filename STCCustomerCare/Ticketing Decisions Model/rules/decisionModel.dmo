@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
   <name>decisionModel</name>
   <uuid>d95b55c0-8965-4302-bd01-638a54d98cc0</uuid>
   <locale>en_US</locale>
-  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+  <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
@@ -19,8 +19,8 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.String" collection="false" name="TicketID"/>
-                <input bomType="Priority" collection="false" name="Priority"/>
-                <input bomType="Severity" collection="false" name="Severity"/>
+                <input bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.Priority" collection="false" name="Priority"/>
+                <input bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.Severity" collection="false" name="Severity"/>
                 <output bomType="java.lang.String" collection="false" name="Resolution Estimate"/>
                 <rule defaultRule="false" href="node_1/HighPriority.drl" kind="BusinessRule" name="HighPriority"/>
                 <rule defaultRule="false" href="node_1/MediumPriority.drl" kind="BusinessRule" name="MediumPriority"/>
@@ -41,10 +41,10 @@
     <inputData id="node_4" name="Affected System">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="AffectedSystem" collection="false" name="Affected System"/>
+                <output bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem" collection="false" name="Affected System"/>
             </initialization>
         </extensionElements>
-        <variable id="node_4_ii" name="Affected System" typeRef="AffectedSystem"/>
+        <variable id="node_4_ii" name="Affected System" typeRef="cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem"/>
     </inputData>
     <inputData id="node_5" name="Description">
         <extensionElements>
@@ -57,9 +57,9 @@
     <decision id="node_6" name="Notify Manager">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="AffectedSystem" collection="false" name="Affected System"/>
-                <input bomType="Priority" collection="false" name="Priority"/>
-                <input bomType="Severity" collection="false" name="Severity"/>
+                <input bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem" collection="false" name="Affected System"/>
+                <input bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.Priority" collection="false" name="Priority"/>
+                <input bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.Severity" collection="false" name="Severity"/>
                 <output bomType="java.lang.Boolean" collection="false" name="Notify Manager"/>
                 <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_6/Customer%20Care%20rule.drl" kind="BusinessRule" name="Customer Care rule"/>
@@ -80,13 +80,13 @@
     <decision id="node_7" name="Assigned Team">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="AffectedSystem" collection="false" name="Affected System"/>
+                <input bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem" collection="false" name="Affected System"/>
                 <input bomType="java.lang.String" collection="false" name="Description"/>
-                <output bomType="AssignedTeam" collection="false" name="Assigned Team"/>
+                <output bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam" collection="false" name="Assigned Team"/>
                 <rule defaultRule="false" href="node_7/Assign%20Team%20Rule.dmt" kind="DecisionTable" name="Assign Team Rule"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_7_ii" name="Assigned Team" typeRef="AssignedTeam"/>
+        <variable id="node_7_ii" name="Assigned Team" typeRef="cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam"/>
         <informationRequirement>
             <requiredInput href="#node_4"/>
         </informationRequirement>
@@ -97,18 +97,19 @@
     <inputData id="node_8" name="Priority">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="Priority" collection="false" name="Priority"/>
+                <output bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.Priority" collection="false" name="Priority"/>
             </initialization>
         </extensionElements>
-        <variable id="node_8_ii" name="Priority" typeRef="Priority"/>
+        <variable id="node_8_ii" name="Priority" typeRef="cp4admin.test_ads.mydecisionservice.mydatamodel.Priority"/>
     </inputData>
     <inputData id="node_9" name="Severity">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="Severity" collection="false" name="Severity"/>
+                <output bomType="cp4admin.test_ads.mydecisionservice.mydatamodel.Severity" collection="false" name="Severity"/>
             </initialization>
         </extensionElements>
-        <variable id="node_9_ii" name="Severity" typeRef="Severity"/>
+        <variable id="node_9_ii" name="Severity" typeRef="cp4admin.test_ads.mydecisionservice.mydatamodel.Severity"/>
     </inputData>
-</definitions></definition>
+</definitions>
+    </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

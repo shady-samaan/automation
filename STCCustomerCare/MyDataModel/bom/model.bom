@@ -1,4 +1,6 @@
 
+package cp4admin.test_ads.mydecisionservice.mydatamodel;
+
 
 public class AffectedSystem
         extends java.lang.Enum
@@ -7,16 +9,16 @@ public class AffectedSystem
         property "de.generated" "true"
 {
     domain {static customerCare, static networkSystem, static operationCenter, static paymentSystem}
-    public static final readonly AffectedSystem customerCare
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem customerCare
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "CustomerCare";
-    public static final readonly AffectedSystem networkSystem
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem networkSystem
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "NetworkSystem";
-    public static final readonly AffectedSystem operationCenter
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem operationCenter
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "OperationCenter";
-    public static final readonly AffectedSystem paymentSystem
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AffectedSystem paymentSystem
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "PaymentSystem";
 }
@@ -28,16 +30,16 @@ public class AssignedTeam
         property "de.generated" "true"
 {
     domain {static ITOperations, static databaseAdministration, static infrastructure, static networks}
-    public static final readonly AssignedTeam ITOperations
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam ITOperations
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "ITOperations";
-    public static final readonly AssignedTeam databaseAdministration
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam databaseAdministration
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "DatabaseAdministration";
-    public static final readonly AssignedTeam infrastructure
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam infrastructure
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Infrastructure";
-    public static final readonly AssignedTeam networks
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.AssignedTeam networks
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Networks";
 }
@@ -49,16 +51,16 @@ public class EscalationLevel
         property "de.generated" "true"
 {
     domain {static director, static generalManager, static manager, static none}
-    public static final readonly EscalationLevel director
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel director
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Director";
-    public static final readonly EscalationLevel generalManager
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel generalManager
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "GeneralManager";
-    public static final readonly EscalationLevel manager
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel manager
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Manager";
-    public static final readonly EscalationLevel none
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.EscalationLevel none
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "None";
 }
@@ -70,13 +72,13 @@ public class Priority
         property "de.generated" "true"
 {
     domain {static high, static low, static medium}
-    public static final readonly Priority high
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.Priority high
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "High";
-    public static final readonly Priority low
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.Priority low
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Low";
-    public static final readonly Priority medium
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.Priority medium
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Medium";
 }
@@ -88,13 +90,13 @@ public class Severity
         property "de.generated" "true"
 {
     domain {static $, static $1, static $2}
-    public static final readonly Severity $
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.Severity $
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "1";
-    public static final readonly Severity $1
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.Severity $1
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "2";
-    public static final readonly Severity $2
+    public static final readonly cp4admin.test_ads.mydecisionservice.mydatamodel.Severity $2
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "3";
 }
