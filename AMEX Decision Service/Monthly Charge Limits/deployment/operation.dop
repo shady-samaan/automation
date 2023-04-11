@@ -4,4 +4,13 @@
   <uuid>a3e6cdc3-39e9-427e-9dba-089e995b14e8</uuid>
   <decisionModel href="../rules/decisionModel.dmo#399656c4-ed62-49de-bac3-6f77cffeb985"/>
   <targetRuleProject href="../../Monthly%20Charge%20Limits#06be3fab-56af-4dae-b277-9ef5357a42a1"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Monthly-Charge-Limits"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>

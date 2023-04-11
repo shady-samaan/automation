@@ -4,4 +4,13 @@
   <uuid>effca3f7-78f1-4339-851b-a570bae3dfe2</uuid>
   <decisionModel href="../rules/decisionModel.dmo#72fb9f17-7d5d-4d22-a94a-4fc4d04bd533"/>
   <targetRuleProject href="../../Real-time%20temporary%20Charge%20limit%20increase#5cf9a6b6-9d6b-44fc-88ad-eddd970e8195"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Real-time-temporary-Charge-limit-increase"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
