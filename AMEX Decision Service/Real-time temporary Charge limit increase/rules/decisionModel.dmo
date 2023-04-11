@@ -29,6 +29,7 @@
                 <rule defaultRule="false" href="node_1/Existing%20Temp%20Limit%20more%20than%201000.drl" kind="BusinessRule" name="Existing Temp Limit more than 1000"/>
                 <rule defaultRule="false" href="node_1/Good%20Info%20,%20old%20member,%20limit%20less%20than%201000.drl" kind="BusinessRule" name="Good Info , old member, limit less than 1000"/>
                 <rule defaultRule="true" href="node_1/Default%20Rule.drl" kind="BusinessRule" name="Default Rule"/>
+                <rule defaultRule="false" href="node_1/Membership%20more%20than%206%20months.drl" kind="BusinessRule" name="Membership more than 6 months"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Decision" typeRef="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision"/>
