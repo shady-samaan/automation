@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Delinquent Rule</name>
+  <uuid>5c959f4c-85f9-40f3-8bb9-054e1561271b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the paymentHistory of 'Bureau Info' is Delinquent 
+then
+	set decision to Limit Decrease ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

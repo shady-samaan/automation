@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>72fb9f17-7d5d-4d22-a94a-4fc4d04bd533</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer Info">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo" collection="false" name="Customer Info"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer Info" typeRef="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo"/>
+    </inputData>
+    <decision id="node_1" name="Decision">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo" collection="false" name="Customer Info"/>
+                <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo" collection="false" name="Bureau Info"/>
+                <input bomType="java.lang.Long" collection="false" name="Temp Limit Info"/>
+                <output bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision" collection="false" name="Decision"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision" typeRef="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Bureau Info">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo" collection="false" name="Bureau Info"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Bureau Info" typeRef="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo"/>
+    </inputData>
+    <inputData id="node_3" name="Temp Limit Info">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Temp Limit Info"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Temp Limit Info" typeRef="java.lang.Long"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

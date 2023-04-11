@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Non-Employed Rule</name>
+  <uuid>6cdfa71a-5cf1-49a1-9ab4-495829316972</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the Employment State of 'Customer Info' is Non-Employed 
+	and the paymentHistory of 'Bureau Info' is Good 
+then
+	set decision to No Change ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

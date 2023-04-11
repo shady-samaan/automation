@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Decisions Table</name>
+  <uuid>4b01b5e2-33b8-4f6f-9fa5-9d6a6232dfd8</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the accountBalance of 'Bureau Info' is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the paymentHistory of 'Bureau Info' is <a paymentHistoryEnum>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the creditLimit of 'Bureau Info' is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Age of 'Customer Info' is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Employment State of 'Customer Info' is <an Employment Status>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C5">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the Salary of 'Customer Info' is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set decision to <a Monthly Charge Limit Decision>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[10000]]></Param>
+                        <Param><![CDATA[20000]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Good]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[50000]]></Param>
+                                        <Param><![CDATA[70000]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[30]]></Param>
+                                                <Param><![CDATA[59]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C4">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[Employed]]></Param>
+                                                    </Expression>
+                                                    <Partition DefId="C5">
+                                                        <Condition>
+                                                            <Expression>
+                                                                <Param><![CDATA[100000]]></Param>
+                                                                <Param><![CDATA[150000]]></Param>
+                                                            </Expression>
+                                                            <ActionSet>
+                                                                <Action DefId="A0">
+                                                                    <Expression>
+                                                                        <Param><![CDATA[Limit Increase]]></Param>
+                                                                    </Expression>
+                                                                </Action>
+                                                            </ActionSet>
+                                                        </Condition>
+                                                    </Partition>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[20001]]></Param>
+                        <Param><![CDATA[30000]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Late]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[70001]]></Param>
+                                        <Param><![CDATA[80000]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[40]]></Param>
+                                                <Param><![CDATA[59]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C4">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[Employed]]></Param>
+                                                    </Expression>
+                                                    <Partition DefId="C5">
+                                                        <Condition>
+                                                            <Expression>
+                                                                <Param><![CDATA[150001]]></Param>
+                                                                <Param><![CDATA[170000]]></Param>
+                                                            </Expression>
+                                                            <ActionSet>
+                                                                <Action DefId="A0">
+                                                                    <Expression>
+                                                                        <Param><![CDATA[Limit Decrease]]></Param>
+                                                                    </Expression>
+                                                                </Action>
+                                                            </ActionSet>
+                                                        </Condition>
+                                                    </Partition>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[30001]]></Param>
+                        <Param><![CDATA[40000]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Good]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[80001]]></Param>
+                                        <Param><![CDATA[90000]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C3">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[35]]></Param>
+                                                <Param><![CDATA[55]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C4">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[Employed]]></Param>
+                                                    </Expression>
+                                                    <Partition DefId="C5">
+                                                        <Condition>
+                                                            <Expression>
+                                                                <Param><![CDATA[170001]]></Param>
+                                                                <Param><![CDATA[180000]]></Param>
+                                                            </Expression>
+                                                            <ActionSet>
+                                                                <Action DefId="A0">
+                                                                    <Expression>
+                                                                        <Param><![CDATA[No Change]]></Param>
+                                                                    </Expression>
+                                                                </Action>
+                                                            </ActionSet>
+                                                        </Condition>
+                                                    </Partition>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet/>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[accountBalance]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[paymentHistory]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Employment State]]></Data>
+            <Data Name="Definitions(C5)#HeaderText"><![CDATA[Salary]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[creditLimit]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[Age]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

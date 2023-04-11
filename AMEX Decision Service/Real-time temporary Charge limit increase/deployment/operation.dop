@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Real-time temporary Charge limit increase">
+  <name>Real-time-temporary-Charge-limit-increase</name>
+  <uuid>effca3f7-78f1-4339-851b-a570bae3dfe2</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#72fb9f17-7d5d-4d22-a94a-4fc4d04bd533"/>
+  <targetRuleProject href="../../Real-time%20temporary%20Charge%20limit%20increase#5cf9a6b6-9d6b-44fc-88ad-eddd970e8195"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

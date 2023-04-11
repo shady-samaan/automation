@@ -1,0 +1,128 @@
+
+package cp4admin.amex_decisions.monthly_charge_limits.bureauinfo;
+
+
+public class BureauInfo
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "BureauInfo"
+        property "de.generated" "true"
+{
+    public java.lang.Long accountBalance
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "accountBalance"
+                property update "true";
+    public java.lang.Long creditLimit
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "creditLimit"
+                property update "true";
+    public cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum paymentHistory
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "paymentHistory"
+                property update "true";
+    public BureauInfo(java.lang.Long accountBalance, java.lang.Long creditLimit, cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum paymentHistory)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public BureauInfo()
+                property "dataio.default" "true";
+}
+
+public class CreditLimitDecision
+        extends java.lang.Enum
+        property "ads.typeId" "8"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CreditLimitDecision"
+        property "de.generated" "true"
+{
+    domain {static authorize, static decline, static refer}
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision authorize
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Authorize";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision decline
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Decline";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision refer
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Refer";
+}
+
+public class CustomerInfo
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CustomerInfo"
+        property "de.generated" "true"
+{
+    public double age
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Age"
+                property update "true";
+    public cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus employmentState
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "EmploymentState"
+                property update "true";
+    public java.lang.Long salary
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Salary"
+                property update "true";
+    public CustomerInfo(double age, cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus employmentState, java.lang.Long salary)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CustomerInfo()
+                property "dataio.default" "true";
+}
+
+public class EmploymentStatus
+        extends java.lang.Enum
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "EmploymentStatus"
+        property "de.generated" "true"
+{
+    domain {static employed, static non$Employed}
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus employed
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Employed";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus non$Employed
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Non-Employed";
+}
+
+public class MonthlyChargeLimitDecision
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "MonthlyChargeLimitDecision"
+        property "de.generated" "true"
+{
+    domain {static limitDecrease, static limitIncrease, static noChange}
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.MonthlyChargeLimitDecision limitDecrease
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LimitDecrease";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.MonthlyChargeLimitDecision limitIncrease
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LimitIncrease";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.MonthlyChargeLimitDecision noChange
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "NoChange";
+}
+
+public class PaymentHistoryEnum
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "paymentHistoryEnum"
+        property "de.generated" "true"
+{
+    domain {static default, static delinquent, static good, static late}
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum default
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Default";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum delinquent
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Delinquent";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum good
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Good";
+    public static final readonly cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum late
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Late";
+}
+

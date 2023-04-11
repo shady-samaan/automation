@@ -1,0 +1,1 @@
+{"operationId":"a3e6cdc3-39e9-427e-9dba-089e995b14e8","body":"{\n  \"bureauInfo\": {\n    \"accountBalance\": 10000,\n    \"creditLimit\": 50000,\n    \"paymentHistory\": \"Default\"\n  },\n  \"customerInfo\": {\n    \"Age\": 0,\n    \"EmploymentState\": \"Employed\",\n    \"Salary\": 0\n  }\n}"}
