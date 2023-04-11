@@ -22,6 +22,7 @@
                 <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo" collection="false" name="Bureau Info"/>
                 <input bomType="java.lang.Long" collection="false" name="Temp Limit Info"/>
                 <output bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision" collection="false" name="Decision"/>
+                <rule defaultRule="true" href="node_1/Default%20Rule.drl" kind="BusinessRule" name="Default Rule"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Decision" typeRef="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision"/>
