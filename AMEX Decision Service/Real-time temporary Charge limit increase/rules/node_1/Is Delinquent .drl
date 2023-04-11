@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Default Rule</name>
-  <uuid>dd4d6edc-8f9b-4b9e-a8f7-0cfd52f0cb1e</uuid>
+  <name>Is Delinquent </name>
+  <uuid>4ed7bd29-e7f6-4f87-95f0-c313cc373154</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to Authorize ;]]></definition>
+  <definition><![CDATA[if
+	the paymentHistory of 'Bureau Info' is Delinquent 
+then
+	set decision to Decline ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

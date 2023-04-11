@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Default Rule</name>
-  <uuid>dd4d6edc-8f9b-4b9e-a8f7-0cfd52f0cb1e</uuid>
+  <name>Membership history</name>
+  <uuid>4f14080d-cabf-406e-8ef8-753747286594</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to Authorize ;]]></definition>
+  <definition><![CDATA[if
+	the  Membership Months of 'Customer Info' is at least 6 
+then
+	set decision to "Yes" ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

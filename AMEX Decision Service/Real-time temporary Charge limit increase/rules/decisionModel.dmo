@@ -17,11 +17,17 @@
     </inputData>
     <decision id="node_1" name="Decision">
         <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
                 <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo" collection="false" name="Customer Info"/>
                 <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo" collection="false" name="Bureau Info"/>
-                <input bomType="java.lang.Long" collection="false" name="Temp Limit Info"/>
+                <input bomType="java.lang.Long" collection="false" name="Existing Temp Limit Info"/>
+                <input bomType="java.lang.String" collection="false" name="Member more than 6 months"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Safe Balance"/>
                 <output bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/Is%20Delinquent%20.drl" kind="BusinessRule" name="Is Delinquent "/>
+                <rule defaultRule="false" href="node_1/Is%20Safe%20Balance.drl" kind="BusinessRule" name="Is Safe Balance"/>
+                <rule defaultRule="false" href="node_1/Existing%20Temp%20Limit%20more%20than%201000.drl" kind="BusinessRule" name="Existing Temp Limit more than 1000"/>
+                <rule defaultRule="false" href="node_1/Good%20Info%20,%20old%20member,%20limit%20less%20than%201000.drl" kind="BusinessRule" name="Good Info , old member, limit less than 1000"/>
                 <rule defaultRule="true" href="node_1/Default%20Rule.drl" kind="BusinessRule" name="Default Rule"/>
             </ruleset>
         </extensionElements>
@@ -35,6 +41,12 @@
         <informationRequirement>
             <requiredInput href="#node_3"/>
         </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
     </decision>
     <inputData id="node_2" name="Bureau Info">
         <extensionElements>
@@ -44,13 +56,41 @@
         </extensionElements>
         <variable id="node_2_ii" name="Bureau Info" typeRef="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo"/>
     </inputData>
-    <inputData id="node_3" name="Temp Limit Info">
+    <inputData id="node_3" name="Existing Temp Limit Info">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.Long" collection="false" name="Temp Limit Info"/>
+                <output bomType="java.lang.Long" collection="false" name="Existing Temp Limit Info"/>
             </initialization>
         </extensionElements>
-        <variable id="node_3_ii" name="Temp Limit Info" typeRef="java.lang.Long"/>
+        <variable id="node_3_ii" name="Existing Temp Limit Info" typeRef="java.lang.Long"/>
     </inputData>
+    <decision id="node_4" name="Member more than 6 months">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo" collection="false" name="Customer Info"/>
+                <output bomType="java.lang.String" collection="false" name="Member more than 6 months"/>
+                <rule defaultRule="false" href="node_4/Membership%20history.drl" kind="BusinessRule" name="Membership history"/>
+                <rule defaultRule="true" href="node_4/Default%20Rule.drl" kind="BusinessRule" name="Default Rule"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Member more than 6 months" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Safe Balance">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo" collection="false" name="Bureau Info"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Safe Balance"/>
+                <rule defaultRule="false" href="node_5/Safe%20Balance.drl" kind="BusinessRule" name="Safe Balance"/>
+                <rule defaultRule="true" href="node_5/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Safe Balance" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

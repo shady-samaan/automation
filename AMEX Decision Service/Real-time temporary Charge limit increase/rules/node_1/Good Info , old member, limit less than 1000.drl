@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Good Info , old member, limit less than 1000</name>
+  <uuid>4e0a67f4-18ea-4883-9b58-33d0ff028ccf</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the paymentHistory of 'Bureau Info' is Good 
+	and 'Existing Temp Limit Info' is at least 500 and less than 1000 
+	and 'Member more than 6 months' is "Yes" 
+then
+	set decision to Authorize ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

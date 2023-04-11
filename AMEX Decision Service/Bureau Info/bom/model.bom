@@ -59,11 +59,15 @@ public class CustomerInfo
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "EmploymentState"
                 property update "true";
+    public java.lang.Long membershipMonths
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "MembershipMonths"
+                property update "true";
     public java.lang.Long salary
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Salary"
                 property update "true";
-    public CustomerInfo(double age, cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus employmentState, java.lang.Long salary)
+    public CustomerInfo(double age, cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus employmentState, java.lang.Long membershipMonths, java.lang.Long salary)
                 property autoExpand "true"
                 property beanConstructor "true"
                 property groups "BALA"
