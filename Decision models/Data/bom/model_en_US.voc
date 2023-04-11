@@ -1,0 +1,41 @@
+
+# Term: financial information
+@financial\ information#plural = financial information
+
+# decisions.education.decision_diagram.data.Answer
+decisions.education.decision_diagram.data.Answer#concept.documentation = 
+decisions.education.decision_diagram.data.Answer#concept.label = final answer
+decisions.education.decision_diagram.data.Answer.Answer(java.util.List,boolean)#phrase.navigation = a new {final answer} where {0, explanation} {1, go}
+decisions.education.decision_diagram.data.Answer.addTo_explanation(java.lang.String)#phrase.action = add {0} to the explanations of {this}
+decisions.education.decision_diagram.data.Answer.clear_explanation()#phrase.action = clear the explanations of {this}
+decisions.education.decision_diagram.data.Answer.explanation#phrase.action = set the explanations of {this} to {explanation}
+decisions.education.decision_diagram.data.Answer.explanation#phrase.navigation = {explanation} of {this}
+decisions.education.decision_diagram.data.Answer.go#phrase.action[0] = {this} gets go only if {go}
+decisions.education.decision_diagram.data.Answer.go#phrase.action[1] = make it {go} that {this} is go
+decisions.education.decision_diagram.data.Answer.go#phrase.action[1].deprecated = true
+decisions.education.decision_diagram.data.Answer.go#phrase.navigation = {this} is go
+decisions.education.decision_diagram.data.Answer.go#phrase.negative_predicate = {this} is not go
+decisions.education.decision_diagram.data.Answer.go#phrase.negative_predicate_setter = {this} does not get go
+decisions.education.decision_diagram.data.Answer.go#phrase.positive_predicate_setter = {this} gets go
+decisions.education.decision_diagram.data.Answer.removeFrom_explanation(java.lang.String)#phrase.action = remove {0} from the explanations of {this}
+
+# decisions.education.decision_diagram.data.Finance
+decisions.education.decision_diagram.data.Finance#concept.label = financial information
+decisions.education.decision_diagram.data.Finance.Finance(double,double)#phrase.navigation = a new {financial information} where {0, balance} {1, debit}
+decisions.education.decision_diagram.data.Finance.balance#phrase.action = set the balance of {this} to {balance}
+decisions.education.decision_diagram.data.Finance.balance#phrase.addition_setter = add {balance} to the balance of {this}
+decisions.education.decision_diagram.data.Finance.balance#phrase.navigation = {balance} of {this}
+decisions.education.decision_diagram.data.Finance.balance#phrase.subtraction_setter = subtract {balance} from the balance of {this}
+decisions.education.decision_diagram.data.Finance.debits#phrase.action = set the debit of {this} to {debit}
+decisions.education.decision_diagram.data.Finance.debits#phrase.addition_setter = add {debit} to the debit of {this}
+decisions.education.decision_diagram.data.Finance.debits#phrase.navigation = {debit} of {this}
+decisions.education.decision_diagram.data.Finance.debits#phrase.subtraction_setter = subtract {debit} from the debit of {this}
+
+# decisions.education.decision_diagram.data.Weather
+decisions.education.decision_diagram.data.Weather#concept.label = weather forecast
+decisions.education.decision_diagram.data.Weather.clouds#instance.label = Clouds
+decisions.education.decision_diagram.data.Weather.fair#instance.label = Fair
+decisions.education.decision_diagram.data.Weather.heavyRain#instance.label = Heavy rain
+decisions.education.decision_diagram.data.Weather.rain#instance.label = Rain
+decisions.education.decision_diagram.data.Weather.storm#instance.label = Storm
+decisions.education.decision_diagram.data.Weather.sun#instance.label = Sun
