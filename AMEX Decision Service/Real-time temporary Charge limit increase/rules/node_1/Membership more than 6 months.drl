@@ -4,7 +4,7 @@
   <uuid>987313df-90ff-4dee-b6d4-d929b1f1367c</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-	'Member more than 6 months' is not "Yes" 
+	'Member more than 6 months' is "No" 
 then
 	set decision to Refer ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
