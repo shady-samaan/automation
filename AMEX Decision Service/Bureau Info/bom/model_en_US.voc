@@ -1,7 +1,7 @@
 
 # cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo#concept.label = Bureau Info
-cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo.BureauInfo(java.lang.Long,java.lang.Long,cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum)#phrase.navigation = a new {Bureau Info} where {0, accountBalance} {1, creditLimit} {2, paymentHistory}
+cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo.BureauInfo(long,long,cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.PaymentHistoryEnum)#phrase.navigation = a new {Bureau Info} where {0, accountBalance} {1, creditLimit} {2, paymentHistory}
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo.accountBalance#phrase.action = set the accountBalance of {this} to {accountBalance}
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo.accountBalance#phrase.addition_setter = add {accountBalance} to the accountBalance of {this}
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.BureauInfo.accountBalance#phrase.navigation = {accountBalance} of {this}
@@ -23,7 +23,7 @@ cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CreditLimitDecision.ref
 
 # cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo#concept.label = Customer Info
-cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo.CustomerInfo(double,cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus,java.lang.Long,java.lang.Long)#phrase.navigation = a new {Customer Info} where {0, Age} {1, Employment State} {2, Membership Months} {3, Salary}
+cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo.CustomerInfo(double,cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.EmploymentStatus,long,long)#phrase.navigation = a new {Customer Info} where {0, Age} {1, Employment State} {2, Membership Months} {3, Salary}
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo.age#phrase.action = set the Age of {this} to {Age}
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo.age#phrase.addition_setter = add {Age} to the Age of {this}
 cp4admin.amex_decisions.monthly_charge_limits.bureauinfo.CustomerInfo.age#phrase.navigation = {Age} of {this}

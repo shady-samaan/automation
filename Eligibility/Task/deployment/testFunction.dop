@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="function" usingRuleflow="true" ruleflowName="Copy of Eligibility Rule Flow" targetRuleProjectName="Task">
+  <name>testFunction</name>
+  <uuid>a6e9ed12-0ba2-4802-8ada-e31c8a826753</uuid>
+  <description><![CDATA[]]></description>
+  <referencedVariables variableName="person" variableSetName="parameters">
+    <variableSet href="../rules/parameters.var#cfc7fd43-6285-4abf-872c-7384da6074e5"/>
+  </referencedVariables>
+  <referencedVariables variableName="eligibility" variableSetName="parameters" direction="OUT">
+    <variableSet href="../rules/parameters.var#cfc7fd43-6285-4abf-872c-7384da6074e5"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Copy%20of%20Eligibility%20Rule%20Flow.rfl#ffafe5c8-426d-4501-b74e-75b2b2af9696"/>
+  <targetRuleProject href="../../Task#46b125f8-40f5-45b8-b207-898e14e38876"/>
+  <tags key="operationDescription">
+    <value><![CDATA[]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

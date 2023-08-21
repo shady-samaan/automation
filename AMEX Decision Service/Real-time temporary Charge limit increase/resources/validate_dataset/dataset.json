@@ -1,1 +1,17 @@
-{"operationId":"effca3f7-78f1-4339-851b-a570bae3dfe2","body":"{\"bureauInfo\":{\"accountBalance\":1100,\"creditLimit\":1000,\"paymentHistory\":\"Default\"},\"customerInfo\":{\"Age\":60,\"EmploymentState\":\"Non-Employed\",\"MembershipMonths\":3,\"Salary\":10000},\"existingTempLimitInfo\":700}"}
+{
+  "operationId" : "effca3f7-78f1-4339-851b-a570bae3dfe2",
+  "body" : {
+    "bureauInfo" : {
+      "accountBalance" : 1100,
+      "creditLimit" : 1000,
+      "paymentHistory" : "Default"
+    },
+    "customerInfo" : {
+      "Age" : 60,
+      "EmploymentState" : "Non-Employed",
+      "MembershipMonths" : 3,
+      "Salary" : 10000
+    },
+    "existingTempLimitInfo" : 700
+  }
+}

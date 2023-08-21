@@ -45,7 +45,7 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a Monthly Charge Limit Decision>]]></Text>
+                        <Text><![CDATA[set 'decision' to <a Monthly Charge Limit Decision>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -207,45 +207,74 @@
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression/>
-                    <ActionSet/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
                 </Condition>
             </Partition>
         </Contents>
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[accountBalance]]></Data>
             <Data Name="Definitions(C1)#HeaderText"><![CDATA[paymentHistory]]></Data>
-            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Employment State]]></Data>
-            <Data Name="Definitions(C5)#HeaderText"><![CDATA[Salary]]></Data>
             <Data Name="Definitions(C2)#HeaderText"><![CDATA[creditLimit]]></Data>
             <Data Name="Definitions(C3)#HeaderText"><![CDATA[Age]]></Data>
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Decision]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[Employment State]]></Data>
+            <Data Name="Definitions(C5)#HeaderText"><![CDATA[Salary]]></Data>
         </ResourceSet>
     </Resources>
-</DT></definition>
+</DT>
+</definition>
 </ilog.rules.studio.model.dt:DecisionTable>

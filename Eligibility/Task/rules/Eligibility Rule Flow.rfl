@@ -7,96 +7,99 @@
     <Body>
         <TaskList>
             <StartTask Identifier="task_0"/>
-            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_1" Ordering="Default">
-                <FinalActions Language="bal">set the decision of 'the eligibility' to Full;
-set the message of 'the eligibility' to "Married and employed in Gov or None" ;</FinalActions>
-            </RuleTask>
-            <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_3" Ordering="Default">
-                <FinalActions Language="bal"> set the decision of 'the eligibility' to Partial; 
- set the message of 'the eligibility' to "Age less than 25, PHI validation is Yes" ;</FinalActions>
-            </RuleTask>
             <StopTask Identifier="task_4"/>
-            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_5" Ordering="Default"/>
-            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_6" Ordering="Default"/>
-            <RuleTask ExecutionMode="RetePlus" ExitCriteria="None" Identifier="task_7" Ordering="Default"/>
+            <ActionTask Identifier="task_8">
+                <Actions Language="bal"><![CDATA[set the decision of 'the eligibility' to Full;
+set the message of 'the eligibility' to "Married and employed in Gov or None" ;]]></Actions>
+            </ActionTask>
+            <ActionTask Identifier="task_10"/>
+            <ActionTask Identifier="task_11">
+                <Actions Language="bal"><![CDATA[set the decision of 'the eligibility' to Partial; ]]></Actions>
+            </ActionTask>
+            <ActionTask Identifier="task_12"/>
+            <ActionTask Identifier="task_13"/>
+            <ActionTask Identifier="task_14"/>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
-            <TaskNode Identifier="node_1" Task="task_1"/>
-            <TaskNode Identifier="node_4" Task="task_3"/>
             <TaskNode Identifier="node_5" Task="task_4"/>
             <BranchNode Identifier="node_6"/>
             <BranchNode Identifier="node_7"/>
             <BranchNode Identifier="node_8"/>
-            <TaskNode Identifier="node_9" Task="task_5"/>
             <BranchNode Identifier="node_10"/>
-            <TaskNode Identifier="node_11" Task="task_6"/>
-            <TaskNode Identifier="node_12" Task="task_7"/>
             <BranchNode Identifier="node_13"/>
+            <TaskNode Identifier="node_14" Task="task_8"/>
+            <TaskNode Identifier="node_16" Task="task_10"/>
+            <TaskNode Identifier="node_17" Task="task_11"/>
+            <TaskNode Identifier="node_18" Task="task_12"/>
+            <TaskNode Identifier="node_19" Task="task_13"/>
+            <TaskNode Identifier="node_20" Task="task_14"/>
         </NodeList>
         <TransitionList>
-            <Transition Identifier="transition_2" Source="node_1" Target="node_5"/>
             <Transition Identifier="transition_4" Source="node_0" Target="node_6"/>
             <Transition Identifier="transition_7" Source="node_6" Target="node_7">
-                <Conditions Language="bal">the marital status of 'the person' is Single </Conditions>
-            </Transition>
-            <Transition Identifier="transition_5" Source="node_7" Target="node_1"/>
-            <Transition Identifier="transition_8" Source="node_8" Target="node_4">
-                <Conditions Language="bal">the phi of 'the person' is Yes </Conditions>
+                <Conditions Language="bal"><![CDATA[the marital status of 'the person' is Single ]]></Conditions>
             </Transition>
             <Transition Identifier="transition_9" Source="node_7" Target="node_8">
-                <Conditions Language="bal"> the age of 'the person' is at most 25</Conditions>
+                <Conditions Language="bal"><![CDATA[ the age of 'the person' is at most 25]]></Conditions>
             </Transition>
-            <Transition Identifier="transition_10" Source="node_4" Target="node_5"/>
-            <Transition Identifier="transition_12" Source="node_10" Target="node_9">
-                <Conditions Language="bal">the father employment status in MHRSD of 'the person' is Private
-or the mother employment status in MHRSD of 'the person' is Private</Conditions>
-            </Transition>
-            <Transition Identifier="transition_13" Source="node_8" Target="node_10"/>
-            <Transition Identifier="transition_11" Source="node_9" Target="node_5"/>
-            <Transition Identifier="transition_14" Source="node_10" Target="node_11"/>
-            <Transition Identifier="transition_15" Source="node_11" Target="node_5"/>
-            <Transition Identifier="transition_16" Source="node_13" Target="node_1">
-                <Conditions Language="bal">the employment status in MHRSD of 'the person' is Gov or the employment status in MHRSD of 'the person' is None </Conditions>
+            <Transition Identifier="transition_13" Source="node_8" Target="node_10">
+                <Conditions Language="bal"><![CDATA[the phi of 'the person' is No ]]></Conditions>
             </Transition>
             <Transition Identifier="transition_17" Source="node_6" Target="node_13"/>
-            <Transition Identifier="transition_18" Source="node_13" Target="node_12"/>
-            <Transition Identifier="transition_19" Source="node_12" Target="node_5"/>
+            <Transition Identifier="transition_20" Source="node_7" Target="node_14"/>
+            <Transition Identifier="transition_21" Source="node_14" Target="node_5"/>
+            <Transition Identifier="transition_16" Source="node_13" Target="node_16">
+                <Conditions Language="bal"><![CDATA[ the employment status in MHRSD of 'the person' is Private ]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_22" Source="node_16" Target="node_5"/>
+            <Transition Identifier="transition_23" Source="node_13" Target="node_17"/>
+            <Transition Identifier="transition_18" Source="node_17" Target="node_5"/>
+            <Transition Identifier="transition_24" Source="node_8" Target="node_18"/>
+            <Transition Identifier="transition_19" Source="node_18" Target="node_5"/>
+            <Transition Identifier="transition_26" Source="node_10" Target="node_19"/>
+            <Transition Identifier="transition_25" Source="node_19" Target="node_5"/>
+            <Transition Identifier="transition_28" Source="node_10" Target="node_20">
+                <Conditions Language="bal"><![CDATA[the father employment status in MHRSD of 'the person' is Private
+or the mother employment status in MHRSD of 'the person' is Private]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_27" Source="node_20" Target="node_5"/>
         </TransitionList>
     </Body>
     <Resources>
         <ResourceSet Locale="en_US">
-            <Data Name="transition_8#label">Yes</Data>
-            <Data Name="node_5#name">End node 1</Data>
-            <Data Name="node_10#label">Parents Employment</Data>
-            <Data Name="node_1#label">Full Eligibility</Data>
-            <Data Name="node_6#label">Marital Status</Data>
-            <Data Name="node_8#label">PHI Validation</Data>
-            <Data Name="transition_13#label">No</Data>
-            <Data Name="transition_16#label">Gov or None</Data>
-            <Data Name="node_11#name">Full Eligibility</Data>
-            <Data Name="node_8#name">PHI Validation</Data>
-            <Data Name="node_12#label">Partial Eligibility</Data>
-            <Data Name="node_11#label">Full Eligibility</Data>
-            <Data Name="transition_9#label">Age &lt;= 25</Data>
-            <Data Name="transition_18#label"/>
-            <Data Name="node_7#label">Age</Data>
-            <Data Name="node_1#name">Full Eligibility</Data>
-            <Data Name="node_5#label">End node 1</Data>
-            <Data Name="node_13#label">Employment Status</Data>
-            <Data Name="transition_7#label">Single</Data>
-            <Data Name="node_10#name">Parents Employment</Data>
-            <Data Name="node_4#name">Partial Eligibility</Data>
-            <Data Name="node_7#name">Age</Data>
-            <Data Name="node_6#name">Marital Status</Data>
-            <Data Name="node_9#name">Partial Eligibility</Data>
-            <Data Name="node_12#name">Partial Eligibility</Data>
-            <Data Name="node_0#name">Start node</Data>
-            <Data Name="node_4#label">Partial Eligibility</Data>
-            <Data Name="transition_5#label">Age &gt; 25</Data>
-            <Data Name="node_9#label">Partial Eligibility</Data>
-            <Data Name="node_13#name">Employment Status</Data>
-            <Data Name="transition_12#label">Any of the parents work in Private</Data>
+            <Data Name="node_17#name"><![CDATA[Full Eligible]]></Data>
+            <Data Name="transition_17#label"><![CDATA[Married]]></Data>
+            <Data Name="node_14#name"><![CDATA[Full Eligibility]]></Data>
+            <Data Name="node_17#label"><![CDATA[Full Eligible]]></Data>
+            <Data Name="node_5#name"><![CDATA[End node 1]]></Data>
+            <Data Name="node_10#label"><![CDATA[Parents Employment]]></Data>
+            <Data Name="node_19#label"><![CDATA[Full Eligible]]></Data>
+            <Data Name="node_20#label"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="node_20#name"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="transition_20#label"><![CDATA[Age > 25]]></Data>
+            <Data Name="node_6#label"><![CDATA[Marital Status]]></Data>
+            <Data Name="node_14#label"><![CDATA[Full Eligibility]]></Data>
+            <Data Name="node_18#name"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="node_8#label"><![CDATA[PHI Validation]]></Data>
+            <Data Name="transition_13#label"><![CDATA[No]]></Data>
+            <Data Name="transition_16#label"><![CDATA[Private]]></Data>
+            <Data Name="node_8#name"><![CDATA[PHI Validation]]></Data>
+            <Data Name="node_18#label"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="transition_9#label"><![CDATA[Age <= 25]]></Data>
+            <Data Name="node_7#label"><![CDATA[Age]]></Data>
+            <Data Name="transition_28#label"><![CDATA[One of parents work in Private]]></Data>
+            <Data Name="node_5#label"><![CDATA[End node 1]]></Data>
+            <Data Name="node_13#label"><![CDATA[Employment Status]]></Data>
+            <Data Name="transition_7#label"><![CDATA[Single]]></Data>
+            <Data Name="node_10#name"><![CDATA[Parents Employment]]></Data>
+            <Data Name="node_7#name"><![CDATA[Age]]></Data>
+            <Data Name="node_6#name"><![CDATA[Marital Status]]></Data>
+            <Data Name="node_0#name"><![CDATA[Start node]]></Data>
+            <Data Name="node_13#name"><![CDATA[Employment Status]]></Data>
+            <Data Name="node_16#label"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="node_16#name"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="node_19#name"><![CDATA[Full Eligible]]></Data>
         </ResourceSet>
     </Resources>
 </Ruleflow>
