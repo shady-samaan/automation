@@ -1,0 +1,75 @@
+
+# u9401208.insurance_eligibility.eligibility.datamodel.Eligibility
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility#concept.label = eligibility
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility.Eligibility(u9401208.insurance_eligibility.eligibility.datamodel._Eligibility,java.lang.String)#phrase.navigation = a new {eligibility} where {0, decision} {1, message}
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility.decision#phrase.action = set the decision of {this} to {decision}
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility.decision#phrase.clearer = clear the decision of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility.decision#phrase.navigation = {decision} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility.message#phrase.action = set the message of {this} to {message}
+u9401208.insurance_eligibility.eligibility.datamodel.Eligibility.message#phrase.navigation = {message} of {this}
+
+# u9401208.insurance_eligibility.eligibility.datamodel.Root
+u9401208.insurance_eligibility.eligibility.datamodel.Root#concept.label = person
+u9401208.insurance_eligibility.eligibility.datamodel.Root.Root(long,java.lang.String,int,java.lang.String,u9401208.insurance_eligibility.eligibility.datamodel._Employment,u9401208.insurance_eligibility.eligibility.datamodel._Employment,java.lang.String,int,u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus,u9401208.insurance_eligibility.eligibility.datamodel._Employment,u9401208.insurance_eligibility.eligibility.datamodel._Yes_No,java.lang.String)#phrase.navigation = a new {person} where {0, age} {1, approvedexpat} {2, dob} {3, employed in NG  mil  MOI} {4, employment status in MHRSD} {5, father employment status in MHRSD} {6, gender} {7, id} {8, marital status} {9, mother employment status in MHRSD} {10, phi} {11, saudi}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.age#phrase.action = set the age of {this} to {age}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.age#phrase.addition_setter = add {age} to the age of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.age#phrase.navigation = {age} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.approvedexpat#phrase.action = set the approvedexpat of {this} to {approvedexpat}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.approvedexpat#phrase.navigation = {approvedexpat} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.dob#phrase.action = set the dob of {this} to {dob}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.dob#phrase.addition_setter = add {dob} to the dob of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.dob#phrase.navigation = {dob} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.dob#phrase.subtraction_setter = subtract {dob} from the dob of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.employed_in_NG__Mil__MOI#phrase.action = set the employed in NG  mil  MOI of {this} to {employed in NG  mil  MOI}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.employed_in_NG__Mil__MOI#phrase.navigation = {employed in NG  mil  MOI} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.employmentStatusInMHRSD#phrase.action = set the employment status in MHRSD of {this} to {employment status in MHRSD}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.employmentStatusInMHRSD#phrase.clearer = clear the employment status in MHRSD of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.employmentStatusInMHRSD#phrase.navigation = {employment status in MHRSD} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.fatherEmploymentStatusInMHRSD#phrase.action = set the father employment status in MHRSD of {this} to {father employment status in MHRSD}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.fatherEmploymentStatusInMHRSD#phrase.clearer = clear the father employment status in MHRSD of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.fatherEmploymentStatusInMHRSD#phrase.navigation = {father employment status in MHRSD} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.gender#phrase.action = set the gender of {this} to {gender}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.gender#phrase.navigation = {gender} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.id#phrase.action = set the id of {this} to {id}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.id#phrase.addition_setter = add {id} to the id of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.id#phrase.navigation = {id} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.id#phrase.subtraction_setter = subtract {id} from the id of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.maritalStatus#phrase.action = set the marital status of {this} to {marital status}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.maritalStatus#phrase.clearer = clear the marital status of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.maritalStatus#phrase.navigation = {marital status} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.motherEmploymentStatusInMHRSD#phrase.action = set the mother employment status in MHRSD of {this} to {mother employment status in MHRSD}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.motherEmploymentStatusInMHRSD#phrase.clearer = clear the mother employment status in MHRSD of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.motherEmploymentStatusInMHRSD#phrase.navigation = {mother employment status in MHRSD} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.phi#phrase.action = set the phi of {this} to {phi}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.phi#phrase.clearer = clear the phi of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.phi#phrase.navigation = {phi} of {this}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.saudi#phrase.action = set the saudi of {this} to {saudi}
+u9401208.insurance_eligibility.eligibility.datamodel.Root.saudi#phrase.navigation = {saudi} of {this}
+
+# u9401208.insurance_eligibility.eligibility.datamodel._Eligibility
+u9401208.insurance_eligibility.eligibility.datamodel._Eligibility#concept.label = _Eligibility
+u9401208.insurance_eligibility.eligibility.datamodel._Eligibility.full#instance.label = Full
+u9401208.insurance_eligibility.eligibility.datamodel._Eligibility.none#instance.label = None
+u9401208.insurance_eligibility.eligibility.datamodel._Eligibility.partial#instance.label = Partial
+
+# u9401208.insurance_eligibility.eligibility.datamodel._Employment
+u9401208.insurance_eligibility.eligibility.datamodel._Employment#concept.label = _Employment
+u9401208.insurance_eligibility.eligibility.datamodel._Employment.gov#instance.label = Gov
+u9401208.insurance_eligibility.eligibility.datamodel._Employment.none#instance.label = None
+u9401208.insurance_eligibility.eligibility.datamodel._Employment.private#instance.label = Private
+
+# u9401208.insurance_eligibility.eligibility.datamodel._Gender
+u9401208.insurance_eligibility.eligibility.datamodel._Gender#concept.label = _Gender
+u9401208.insurance_eligibility.eligibility.datamodel._Gender.female#instance.label = Female
+u9401208.insurance_eligibility.eligibility.datamodel._Gender.male#instance.label = Male
+
+# u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus
+u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus#concept.label = _MaritalStatus
+u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus.married#instance.label = Married
+u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus.single#instance.label = Single
+
+# u9401208.insurance_eligibility.eligibility.datamodel._Yes_No
+u9401208.insurance_eligibility.eligibility.datamodel._Yes_No#concept.label = _Yes_No
+u9401208.insurance_eligibility.eligibility.datamodel._Yes_No.no#instance.label = No
+u9401208.insurance_eligibility.eligibility.datamodel._Yes_No.yes#instance.label = Yes

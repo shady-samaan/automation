@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" language="ARL">
+  <name>parameters</name>
+  <uuid>cfc7fd43-6285-4abf-872c-7384da6074e5</uuid>
+  <variables name="person" type="u9401208.insurance_eligibility.eligibility.datamodel.Root" initialValue="" verbalization="the person" jsonName=""/>
+  <variables name="eligibility" type="u9401208.insurance_eligibility.eligibility.datamodel.Eligibility" initialValue="" verbalization="the eligibility" jsonName=""/>
+</ilog.rules.studio.model.base:VariableSet>

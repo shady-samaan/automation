@@ -1,0 +1,171 @@
+
+package u9401208.insurance_eligibility.eligibility.datamodel;
+
+
+class Eligibility
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "eligibility"
+        #de.generated
+{
+    u9401208.insurance_eligibility.eligibility.datamodel._Eligibility decision
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "decision"
+                #update;
+    string message
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "message"
+                #update;
+    Eligibility(u9401208.insurance_eligibility.eligibility.datamodel._Eligibility decision, string message)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Eligibility()
+                #dataio.default;
+}
+
+class Root
+        property ads.typeId "1"
+        #de.generated
+{
+    long age
+                property ads.attributeId "13"
+                property com.fasterxml.jackson.annotation.JsonProperty "age"
+                #update;
+    string approvedexpat
+                property ads.attributeId "1"
+                #update;
+    int dob
+                property ads.attributeId "2"
+                #update;
+    string employed_in_NG__Mil__MOI
+                property ads.attributeId "5"
+                #update;
+    u9401208.insurance_eligibility.eligibility.datamodel._Employment employmentStatusInMHRSD
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "employmentStatusInMHRSD"
+                #update;
+    u9401208.insurance_eligibility.eligibility.datamodel._Employment fatherEmploymentStatusInMHRSD
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "fatherEmploymentStatusInMHRSD"
+                #update;
+    string gender
+                property ads.attributeId "7"
+                #update;
+    int id
+                property ads.attributeId "8"
+                #update;
+    u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus maritalStatus
+                property ads.attributeId "9"
+                #update;
+    u9401208.insurance_eligibility.eligibility.datamodel._Employment motherEmploymentStatusInMHRSD
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "motherEmploymentStatusInMHRSD"
+                #update;
+    u9401208.insurance_eligibility.eligibility.datamodel._Yes_No phi
+                property ads.attributeId "11"
+                #update;
+    string saudi
+                property ads.attributeId "12"
+                #update;
+    Root(long age, 
+        string approvedexpat, 
+        int dob, 
+        string employed_in_NG__Mil__MOI, 
+        u9401208.insurance_eligibility.eligibility.datamodel._Employment employmentStatusInMHRSD, 
+        u9401208.insurance_eligibility.eligibility.datamodel._Employment fatherEmploymentStatusInMHRSD, 
+        string gender, 
+        int id, 
+        u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus maritalStatus, 
+        u9401208.insurance_eligibility.eligibility.datamodel._Employment motherEmploymentStatusInMHRSD, 
+        u9401208.insurance_eligibility.eligibility.datamodel._Yes_No phi, 
+        string saudi)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Root()
+                #dataio.default;
+}
+
+class _Eligibility
+        extends java.lang.Enum
+        property ads.typeId "7"
+        property com.fasterxml.jackson.annotation.JsonTypeName "_Eligibility"
+        #de.generated
+{
+    domain {static full, static none, static partial}
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Eligibility full
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Full";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Eligibility none
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "None";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Eligibility partial
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Partial";
+}
+
+class _Employment
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "_Employment"
+        #de.generated
+{
+    domain {static gov, static none, static @private}
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Employment gov
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Gov";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Employment none
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "None";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Employment @private
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Private";
+}
+
+class _Gender
+        extends java.lang.Enum
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "_Gender"
+        #de.generated
+{
+    domain {static female, static male}
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Gender female
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Female";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Gender male
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Male";
+}
+
+class _MaritalStatus
+        extends java.lang.Enum
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "_MaritalStatus"
+        #de.generated
+{
+    domain {static married, static single}
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus married
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Married";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._MaritalStatus single
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Single";
+}
+
+class _Yes_No
+        extends java.lang.Enum
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "_Yes_No"
+        #de.generated
+{
+    domain {static no, static yes}
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Yes_No no
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "No";
+    static final readonly u9401208.insurance_eligibility.eligibility.datamodel._Yes_No yes
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Yes";
+}
+
