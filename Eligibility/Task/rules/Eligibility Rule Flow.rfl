@@ -9,16 +9,35 @@
             <StartTask Identifier="task_0"/>
             <StopTask Identifier="task_4"/>
             <ActionTask Identifier="task_8">
-                <Actions Language="bal"><![CDATA[set the decision of 'the eligibility' to Full;
-set the message of 'the eligibility' to "Married and employed in Gov or None" ;]]></Actions>
+                <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
+	the decision is Partial , 
+	the message is "Partial as citizen is single, younger than 25, PHI is yes" ;]]></Actions>
             </ActionTask>
-            <ActionTask Identifier="task_10"/>
+            <ActionTask Identifier="task_10">
+                <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
+	the decision is Partial , 
+	the message is "Full as citizen is married, works in Private" ;]]></Actions>
+            </ActionTask>
             <ActionTask Identifier="task_11">
-                <Actions Language="bal"><![CDATA[set the decision of 'the eligibility' to Partial; ]]></Actions>
+                <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
+	the decision is Full , 
+	the message is "Full as citizen is married, works in Gov or none" ;]]></Actions>
             </ActionTask>
-            <ActionTask Identifier="task_12"/>
-            <ActionTask Identifier="task_13"/>
-            <ActionTask Identifier="task_14"/>
+            <ActionTask Identifier="task_12">
+                <Actions Language="bal"><![CDATA[set  'the eligibility' to a new eligibility where 
+	the decision is Partial , 
+	the message is "Single, <25 and PHI is Yes" ;]]></Actions>
+            </ActionTask>
+            <ActionTask Identifier="task_13">
+                <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
+	the decision is Full , 
+	the message is "Full as citizen is single, one of the parents work in Private" ;]]></Actions>
+            </ActionTask>
+            <ActionTask Identifier="task_14">
+                <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
+	the decision is Partial , 
+	the message is "Partial as citizen is single, less than 25" ;]]></Actions>
+            </ActionTask>
         </TaskList>
         <NodeList>
             <TaskNode Identifier="node_0" Task="task_0"/>
@@ -34,9 +53,9 @@ set the message of 'the eligibility' to "Married and employed in Gov or None" ;]
             <TaskNode Identifier="node_18" Task="task_12"/>
             <TaskNode Identifier="node_19" Task="task_13"/>
             <TaskNode Identifier="node_20" Task="task_14"/>
+            <BranchNode Identifier="node_15"/>
         </NodeList>
         <TransitionList>
-            <Transition Identifier="transition_4" Source="node_0" Target="node_6"/>
             <Transition Identifier="transition_7" Source="node_6" Target="node_7">
                 <Conditions Language="bal"><![CDATA[the marital status of 'the person' is Single ]]></Conditions>
             </Transition>
@@ -47,7 +66,6 @@ set the message of 'the eligibility' to "Married and employed in Gov or None" ;]
                 <Conditions Language="bal"><![CDATA[the phi of 'the person' is No ]]></Conditions>
             </Transition>
             <Transition Identifier="transition_17" Source="node_6" Target="node_13"/>
-            <Transition Identifier="transition_20" Source="node_7" Target="node_14"/>
             <Transition Identifier="transition_21" Source="node_14" Target="node_5"/>
             <Transition Identifier="transition_16" Source="node_13" Target="node_16">
                 <Conditions Language="bal"><![CDATA[ the employment status in MHRSD of 'the person' is Private ]]></Conditions>
@@ -64,6 +82,12 @@ set the message of 'the eligibility' to "Married and employed in Gov or None" ;]
 or the mother employment status in MHRSD of 'the person' is Private]]></Conditions>
             </Transition>
             <Transition Identifier="transition_27" Source="node_20" Target="node_5"/>
+            <Transition Identifier="transition_30" Source="node_0" Target="node_6"/>
+            <Transition Identifier="transition_31" Source="node_7" Target="node_15"/>
+            <Transition Identifier="transition_29" Source="node_15" Target="node_14">
+                <Conditions Language="bal"><![CDATA[the phi of 'the person' is Yes ]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_20" Source="node_15" Target="node_18"/>
         </TransitionList>
     </Body>
     <Resources>
@@ -77,22 +101,25 @@ or the mother employment status in MHRSD of 'the person' is Private]]></Conditio
             <Data Name="node_19#label"><![CDATA[Full Eligible]]></Data>
             <Data Name="node_20#label"><![CDATA[Partial Eligible]]></Data>
             <Data Name="node_20#name"><![CDATA[Partial Eligible]]></Data>
-            <Data Name="transition_20#label"><![CDATA[Age > 25]]></Data>
+            <Data Name="transition_29#label"><![CDATA[Yes]]></Data>
             <Data Name="node_6#label"><![CDATA[Marital Status]]></Data>
             <Data Name="node_14#label"><![CDATA[Full Eligibility]]></Data>
             <Data Name="node_18#name"><![CDATA[Partial Eligible]]></Data>
+            <Data Name="node_15#label"><![CDATA[PHI Validation]]></Data>
             <Data Name="node_8#label"><![CDATA[PHI Validation]]></Data>
             <Data Name="transition_13#label"><![CDATA[No]]></Data>
             <Data Name="transition_16#label"><![CDATA[Private]]></Data>
             <Data Name="node_8#name"><![CDATA[PHI Validation]]></Data>
             <Data Name="node_18#label"><![CDATA[Partial Eligible]]></Data>
             <Data Name="transition_9#label"><![CDATA[Age <= 25]]></Data>
+            <Data Name="transition_31#label"><![CDATA[Age > 25]]></Data>
             <Data Name="node_7#label"><![CDATA[Age]]></Data>
             <Data Name="transition_28#label"><![CDATA[One of parents work in Private]]></Data>
             <Data Name="node_5#label"><![CDATA[End node 1]]></Data>
             <Data Name="node_13#label"><![CDATA[Employment Status]]></Data>
             <Data Name="transition_7#label"><![CDATA[Single]]></Data>
             <Data Name="node_10#name"><![CDATA[Parents Employment]]></Data>
+            <Data Name="node_15#name"><![CDATA[PHI Validation]]></Data>
             <Data Name="node_7#name"><![CDATA[Age]]></Data>
             <Data Name="node_6#name"><![CDATA[Marital Status]]></Data>
             <Data Name="node_0#name"><![CDATA[Start node]]></Data>
