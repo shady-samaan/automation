@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>u9401208.insurance_eligibility.eligibility</groupId>
-            <artifactId>task</artifactId>
+            <artifactId>eligibilityModel</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -94,6 +94,8 @@
 
 
 
+
+
 <build>
         <resources>
             <resource>
@@ -120,7 +122,7 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>u9401208.insurance_eligibility.eligibility</groupId>
-                                    <artifactId>task</artifactId>
+                                    <artifactId>eligibilityModel</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

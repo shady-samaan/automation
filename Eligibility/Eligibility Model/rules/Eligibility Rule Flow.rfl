@@ -10,8 +10,8 @@
             <StopTask Identifier="task_4"/>
             <ActionTask Identifier="task_8">
                 <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
-	the decision is Partial , 
-	the message is "Partial as citizen is single, younger than 25, PHI is yes" ;]]></Actions>
+	the decision is Full , 
+	the message is "Full as citizen is single, older than 25, PHI is yes" ;]]></Actions>
             </ActionTask>
             <ActionTask Identifier="task_10">
                 <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 

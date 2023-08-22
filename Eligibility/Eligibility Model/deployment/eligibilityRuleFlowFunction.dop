@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="function" usingRuleflow="true" ruleflowName="Eligibility Rule Flow" targetRuleProjectName="Task">
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="function" usingRuleflow="true" ruleflowName="Eligibility Rule Flow" targetRuleProjectName="Eligibility Model">
   <name>eligibilityRuleFlowFunction</name>
   <uuid>5617b48d-2217-4d0b-a7db-aff959706d2f</uuid>
   <description><![CDATA[]]></description>
@@ -10,7 +10,7 @@
     <variableSet href="../rules/parameters.var#cfc7fd43-6285-4abf-872c-7384da6074e5"/>
   </referencedVariables>
   <ruleflow href="../rules/Eligibility%20Rule%20Flow.rfl#8bb92967-7a93-4698-94fa-753b36f32595"/>
-  <targetRuleProject href="../../Task#46b125f8-40f5-45b8-b207-898e14e38876"/>
+  <targetRuleProject href="../../Eligibility%20Model#46b125f8-40f5-45b8-b207-898e14e38876"/>
   <tags key="operationDescription">
     <value><![CDATA[""]]></value>
   </tags>

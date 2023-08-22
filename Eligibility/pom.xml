@@ -63,8 +63,8 @@
         </dependencies>
     </dependencyManagement>
     <modules>
-        <module>Task</module>
         <module>data model</module>
+        <module>Eligibility Model</module>
         <module>.decisionservice</module>
     </modules>
 

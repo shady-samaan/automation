@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>u9401208.insurance_eligibility.eligibility</groupId>
-    <artifactId>task</artifactId>
+    <artifactId>eligibilityModel</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
     <build>
@@ -26,7 +26,7 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>Task</name>
+                            <name>Eligibility-Model</name>
                         </deployment>
                     </deployments>
                 <packageName>u9401208.insurance_eligibility.eligibility.task</packageName>
