@@ -12,9 +12,12 @@
   <ruleflow href="../rules/Eligibility%20Rule%20Flow.rfl#8bb92967-7a93-4698-94fa-753b36f32595"/>
   <targetRuleProject href="../../Task#46b125f8-40f5-45b8-b207-898e14e38876"/>
   <tags key="operationDescription">
-    <value><![CDATA[]]></value>
+    <value><![CDATA[""]]></value>
   </tags>
   <tags key="exposedAtRuntime">
-    <value><![CDATA[false]]></value>
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["getEligibility"]]></value>
   </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>

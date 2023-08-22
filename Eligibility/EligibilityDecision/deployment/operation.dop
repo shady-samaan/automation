@@ -11,6 +11,6 @@
     <value><![CDATA["getEligibilityDecision"]]></value>
   </tags>
   <tags key="exposedAtRuntime">
-    <value><![CDATA[true]]></value>
+    <value><![CDATA[false]]></value>
   </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
