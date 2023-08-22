@@ -65,7 +65,6 @@
     <modules>
         <module>Task</module>
         <module>data model</module>
-        <module>EligibilityDecision</module>
         <module>.decisionservice</module>
     </modules>
 

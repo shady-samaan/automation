@@ -13,11 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>u9401208.insurance_eligibility.eligibility</groupId>
-            <artifactId>eligibilityDecision</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>u9401208.insurance_eligibility.eligibility</groupId>
             <artifactId>task</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
@@ -98,6 +93,7 @@
 
 
 
+
 <build>
         <resources>
             <resource>
@@ -122,15 +118,6 @@
                         </goals>
                         <configuration>
                             <artifactItems>
-                                <artifactItem>
-                                    <groupId>u9401208.insurance_eligibility.eligibility</groupId>
-                                    <artifactId>eligibilityDecision</artifactId>
-                                    <version>LATEST-SNAPSHOT</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <includes>**/*.class</includes>
-                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
-                                </artifactItem>
                                 <artifactItem>
                                     <groupId>u9401208.insurance_eligibility.eligibility</groupId>
                                     <artifactId>task</artifactId>

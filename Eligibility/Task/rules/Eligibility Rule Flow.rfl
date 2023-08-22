@@ -26,7 +26,7 @@
             <ActionTask Identifier="task_12">
                 <Actions Language="bal"><![CDATA[set  'the eligibility' to a new eligibility where 
 	the decision is Partial , 
-	the message is "Single, <25 and PHI is Yes" ;]]></Actions>
+	the message is "Single, older than 25 and PHI is Yes" ;]]></Actions>
             </ActionTask>
             <ActionTask Identifier="task_13">
                 <Actions Language="bal"><![CDATA[set 'the eligibility' to a new eligibility where 
